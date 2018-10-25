@@ -57,11 +57,24 @@ export default class App extends Component<Props> {
         idade: this.state.idade,
         avatar_url: this.state.avatar_url,
       })
-    });
+    }).then( (responde) => response.json())
+      .then( (responseJson) => console.log(responseJson));
   }
 
   deletarPerfil(){
+    fetch('http://localhost:3000/pessoas/1', {
+      method: 'DELETE',
+    }).then( (responde) => response.json())
+      .then( (responseJson) => {
+        console.log(responseJson);
+       
+        this.setState({
+          nome: '',
+          idade: '',
+          avatar_url : '',
+        });
 
+      });
   }
 
   render() {
@@ -133,18 +146,19 @@ export default class App extends Component<Props> {
 
         <View style={styles.alinhaBotao}>
           <TouchableHighlight 
-            onPress={ this.editarPerfil()}
+            onPress={ () => this.editarPerfil()}
             style={styles.botao}
           >
           <Text style={styles.botaoTexto}>Editar</Text>
           </TouchableHighlight>
 
           <TouchableHighlight 
-            onPress={ this.deletarPerfil() }
+            onPress={ this.deletarPerfil().bind(this) }
             style={styles.botao}
           >
           <Text style={styles.botaoTexto}>Deletar</Text>
           </TouchableHighlight>
+          //BIND arow function  definem o componente e a  () => this.funcao() sem o bind define o elemento
         </View> 
       </View>
     );

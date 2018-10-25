@@ -73,7 +73,6 @@ export default class App extends Component<Props> {
           idade: '',
           avatar_url : '',
         });
-
       });
   }
 

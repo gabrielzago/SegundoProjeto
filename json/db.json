@@ -1,0 +1,22 @@
+{
+    "pessoas": [
+        {   
+            "id": 1,
+            "nome": "Gabriel",
+            "idade": 26,
+            "avatar_url": "https://slm-assets3.secondlife.com/assets/1556733/view_large/a839a7ee6526cd10eb5be44185d4d545.jpg?1277248625"
+        },
+        {   
+            "id": 2,
+            "nome": "Lucas",
+            "idade": 27,
+            "avatar_url": "https://slm-assets3.secondlife.com/assets/1556733/view_large/a839a7ee6526cd10eb5be44185d4d545.jpg?1277248625"
+        },
+        {   
+            "id": 3,
+            "nome": "Antonio",
+            "idade": 28,
+            "avatar_url": "https://slm-assets3.secondlife.com/assets/1556733/view_large/a839a7ee6526cd10eb5be44185d4d545.jpg?1277248625"
+        }
+    ]
+}
